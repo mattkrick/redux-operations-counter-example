@@ -14,7 +14,7 @@ export default class ClickCounter extends Component {
     return (
       <div>
         <p>
-          All counters clicked: {clickCounter} times
+          Total clicks on increment: {clickCounter} times
         </p>
       </div>
     )

@@ -14,6 +14,13 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + '/index.html')
 })
 
+app.get('/randomnumber', function(req, res) {
+  setTimeout(() => {
+    const randomNumber = "" + parseInt(Math.random() * 100);
+    res.send(randomNumber);
+  }, 1000)
+})
+
 app.listen(port, function(error) {
   if (error) {
     console.error(error)
