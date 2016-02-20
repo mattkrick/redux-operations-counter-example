@@ -17,17 +17,18 @@
   },
   "homepage": "http://rackt.github.io/redux",
   "dependencies": {
+    "babel-polyfill": "6.3.14",
+    "babel-runtime": "6.3.19",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
     "redux": "^3.0.0",
-    "redux-thunk": "^0.1.0",
-    "babel-polyfill": "6.3.14",
-    "babel-runtime": "6.3.19"
+    "redux-operations": "^0.1.0",
+    "redux-thunk": "^0.1.0"
   },
   "devDependencies": {
     "react-transform-catch-errors": "1.0.1",
-    "react-transform-hmr": "1.0.1",
+    "react-transform-hmr": "^1.0.0",
     "redbox-react": "1.2.0",
     "babel-cli": "6.4.0",
     "babel-core": "6.4.0",
@@ -45,7 +46,6 @@
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
     "react-addons-test-utils": "^0.14.0",
-    "react-transform-hmr": "^1.0.0",
     "webpack": "^1.9.11",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0",
