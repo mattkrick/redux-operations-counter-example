@@ -1,15 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import {walkState} from 'redux-operations';
-import {} from '../ducks/counter';
 import Counter from './Counter';
 import {connect} from 'react-redux';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     numberOfCounters: state.numberOfCounters
   }
-}
+};
 
 @connect(mapStateToProps)
 export default class AddDynamicCounters extends Component {
