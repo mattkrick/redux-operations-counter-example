@@ -10,7 +10,7 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 export default class ClickCounter extends Component {
   render() {
-    const {clickCounter} = this.props
+    const {clickCounter} = this.props;
     return (
       <div>
         <p>

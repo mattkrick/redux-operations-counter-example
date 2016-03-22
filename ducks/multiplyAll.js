@@ -7,7 +7,7 @@ export const multiplyAll = operationReducerFactory(defaultState, {
     //priority must be higher so it comes later than the origination click and update
     priority: 100,
     resolve: (state, action)=> {
-      return action.meta.operationResults.counter.state * action.meta.operationResults.clickCounter.state;
+      return action.meta.operations.results.counter.state * action.meta.operations.results.clickCounter.state;
     },
     description: 'All counters clicked multiplied by value of last counter clicked'
   }
