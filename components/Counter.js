@@ -15,8 +15,6 @@ export default class Counter extends Component {
     const { location, counter, dispatch} = this.props;
     const {increment, decrement, incrementIfOdd,
       incrementAsync, setFromFetch, setCounter} = bindOperationToActionCreators(location, COUNTER_OPERATION_NAME, actionCreators);
-    const foo = bindOperationToActionCreators(location, COUNTER_OPERATION_NAME, actionCreators);
-    console.log('inc', foo);
     return (
       <div>
         <p>
