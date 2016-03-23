@@ -5,7 +5,7 @@ export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
 export const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD';
 export const SET_COUNTER = 'SET_COUNTER';
 export const FETCH_RANDOM_REQUEST = 'FETCH_RANDOM_REQUEST';
-export const COUNTER_OPERATION_NAME = 'counter';
+//export const COUNTER_OPERATION_NAME = 'counter';
 
 export function increment() {
   return {
@@ -46,8 +46,8 @@ export function setCounter(newValue) {
 
 export const actionCreators = {increment, decrement, incrementIfOdd, incrementAsync, setFromFetch, setCounter};
 
-const defaultState = 0;
-export const counter = operationReducerFactory(defaultState, {
+const initialState = 0;
+export const counter = operationReducerFactory('counter', initialState, {
   INCREMENT_COUNTER: {
     resolve: (state, action)=> state + 1
   },
