@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import {walkState, bindOperationToActionCreators} from 'redux-operations';
-import {actionCreators, counter} from '../ducks/counter';
+import {actionCreators, counter, COUNTER_OPERATION_NAME} from '../ducks/counter';
 import {connect} from 'react-redux';
 
 const mapStateToProps = (state, props) => {
@@ -14,8 +14,8 @@ export default class Counter extends Component {
   render() {
     const { location, counter, dispatch} = this.props;
     const {increment, decrement, incrementIfOdd,
-      incrementAsync, setFromFetch, setCounter} = bindOperationToActionCreators(location, 'counter', actionCreators);
-    const foo = bindOperationToActionCreators(location, 'counter', actionCreators);
+      incrementAsync, setFromFetch, setCounter} = bindOperationToActionCreators(location, COUNTER_OPERATION_NAME, actionCreators);
+    const foo = bindOperationToActionCreators(location, COUNTER_OPERATION_NAME, actionCreators);
     console.log('inc', foo);
     return (
       <div>

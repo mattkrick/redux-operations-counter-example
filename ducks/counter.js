@@ -5,6 +5,7 @@ export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
 export const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD';
 export const SET_COUNTER = 'SET_COUNTER';
 export const FETCH_RANDOM_REQUEST = 'FETCH_RANDOM_REQUEST';
+export const COUNTER_OPERATION_NAME = 'counter';
 
 export function increment() {
   return {
