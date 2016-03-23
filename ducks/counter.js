@@ -5,7 +5,6 @@ export const INCREMENT_ASYNC = 'INCREMENT_ASYNC';
 export const INCREMENT_IF_ODD = 'INCREMENT_IF_ODD';
 export const SET_COUNTER = 'SET_COUNTER';
 export const FETCH_RANDOM_REQUEST = 'FETCH_RANDOM_REQUEST';
-//export const COUNTER_OPERATION_NAME = 'counter';
 
 export function increment() {
   return {
@@ -59,11 +58,9 @@ export const counter = operationReducerFactory('counter', initialState, {
   },
   INCREMENT_ASYNC: {
     resolve: (state, action)=> {
-      console.log('counter async called');
       setTimeout(()=> {
-        const {dispatch, locationInState, operationName} = action.meta.operations;
-        const inc = bindOperationToActionCreators(locationInState, operationName, increment);
-        console.log('timeout returned called');
+        const {dispatch, locationInState} = action.meta.operations;
+        const inc = bindOperationToActionCreators(locationInState, counter, increment);
         dispatch(inc());
       }, 1000);
       return state;
@@ -78,8 +75,8 @@ export const counter = operationReducerFactory('counter', initialState, {
   FETCH_RANDOM_REQUEST: {
     priority: 1,
     resolve: (state, action)=> {
-      const {dispatch, locationInState, operationName} = action.meta.operations;
-      const set = bindOperationToActionCreators(locationInState, operationName, setCounter);
+      const {dispatch, locationInState} = action.meta.operations;
+      const set = bindOperationToActionCreators(locationInState, counter, setCounter);
       window.fetch('http://localhost:3000/randomnumber')
         .then(res => {
           return res.text()
